@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>404 Page not found</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='404.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+	<base target="_blank">
+</head>
+
+<body>
+    <h1>404 Page not found</h1>
+	<div>{{ error_message }}</div>
+    <img src="{{ url_for('static', filename='gif/404.gif') }}"></img>
+</body>
+
+<script>
+</script>

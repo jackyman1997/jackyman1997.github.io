@@ -1,0 +1,179 @@
+html {
+	font-size: 62.5%; /* 62.5% = 10px; to make it easier to calculate REM units. */
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	font-weight: 300;
+	font-size: 2.2rem;
+	color: white;
+	background-color: rgb(60, 60, 60);
+}
+
+a {
+	text-decoration: none;
+}
+
+span.cardTitles {
+	display: inline-flex;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column; /* Arrange items vertically */
+	width: 100%;
+	font-size: 3.2rem;
+}
+
+.topBar{
+	font-size: 6rem;
+	flex-direction: row; /* Arrange items horizontally */
+	flex: 1; /* Occupy equal space */
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+#displayCurrentDate {
+	flex: 0 0 auto; /* No flex, don't grow or shrink */
+	margin-right: auto; /* Align to the left */
+}
+#displayCurrentTime {
+	margin-left: auto; /* Align to the right */
+	padding-right: 20px;
+}
+
+.main {
+	width: 35rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+img.mainImage {
+	height: auto;
+	border-radius: 15rem;
+}
+
+form {
+	width: 56rem;
+	height: 4.4rem;
+	background-color: white;
+	border-radius: 2.2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input.searchInput {
+	all: unset;
+	font: 1.6rem system-ui;
+	color: black;
+	height: 100%;
+	width: 100%;
+	padding: 1px 87px 1px 52px;
+}
+
+button.searchBarButton {
+	all: unset;
+	color: #5f6368;
+	cursor: pointer;
+	width: 44px;
+	height: 42px;
+	position: relative;
+	border-radius: 2.2rem;
+	padding: 0px 10px 0px 0px;
+}
+  
+/* svg {
+	color: #5f6368;
+	fill: currentColor;
+	width: 24px;
+	height: 24px;
+} */
+
+img.searchBarLeftImage {
+	width: auto;
+	height: 42px;
+	border-radius: 2.2rem;
+	position: absolute;
+	padding: 0px 0px 0px 6.5px;
+}
+
+img.searchBarButtonImage {
+	width: auto;
+	height: 42px;
+	border-radius: 2.2rem;
+}
+
+.webBar {
+	display: flex; /* Use flexbox */
+	flex-direction: row; /* Arrange items horizontally */
+	flex: 1; /* Occupy equal space */
+	align-items: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 25px;
+	margin-bottom: auto;
+	justify-content: center;
+}
+
+.card {
+	width: 72.5px;
+	height: 85px;
+	border-radius: 0.5rem;
+	padding: 5px 5px 5px 5px;
+	cursor: pointer;
+}
+.card:hover {
+	background-color: rgba(120, 120, 120, 0.75);
+}
+
+.cardImages {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 42px;
+	height: 42px;
+	border-radius: 1rem;
+}
+
+.cardTitles {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1.2rem;
+	width: 50px;
+	color: white;
+	text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 700px) {
+	.topBar {
+		flex-direction: column; /* Stack displayCurrentTime and displayCurrentDate vertically */
+	}
+	.displayCurrentTime, .displayCurrentDate {
+		flex: none; /* Reset flex to allow wrapping */
+		width: 100%; /* Occupy full width when wrapped */
+	}
+
+	form {
+		width: 30rem;
+	}
+
+	.bottomBar {
+		flex-direction: column;
+	}
+}

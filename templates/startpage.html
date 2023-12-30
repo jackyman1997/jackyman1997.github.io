@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>startpage</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='startpage.css') }}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+	<base target="_blank">
+</head>
+
+<body>
+	<script type="text/javascript" src="{{ url_for('static', filename='startpage.js') }}"></script>
+	
+	<header class="topBar container">
+		<div id="displayCurrentDate"></div>
+		<div id="displayCurrentTime"></div>
+	</header>
+
+	<div class="main container">
+		<img class="mainImage" src="{{ url_for('static', filename='gif/404.gif') }}" onmouseover="this.src='static/icons/search.jpeg';" onmouseout="this.src='static/gif/404.gif';"></img>
+	</div>
+	
+	<div class="searchBar container">
+		<div id="googleSearch">
+			<form class="searchText" action="https://google.com/search" method="get">
+			<input class="searchInput" type="text" name="q" placeholder="Search with Google">
+			<img class="searchBarLeftImage" src="{{ url_for('static', filename='gif/404.gif') }}">
+			<button class="searchBarButton"> 
+				<!-- <svg viewBox="0 0 1024 1024">
+					<path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+					</path>
+				</svg> -->
+				<img class="searchBarButtonImage" src="{{ url_for('static', filename='icons/search.jpeg') }}"></img>
+			</button>
+			</form>
+		</div>
+
+	</div>
+
+	<div class="webBar container">
+		<a href="https://www.youtube.com/" draggable="false">
+			<div class="card container" draggable="true" title="Youtube">
+				<img class="cardImages" src="{{ url_for('static', filename='icons/youtube.jpeg') }}"></img>
+				<div class="cardTitles" >
+					<span>Youtube</span>
+				</div>
+			</div>
+		</a>
+		<a href="https://www.youtube.com/" draggable="false">
+			<div class="card container" draggable="true" title="Youtube">
+				<img class="cardImages" src="{{ url_for('static', filename='icons/youtube.jpeg') }}"></img>
+				<div class="cardTitles" >
+					<span>Youtube</span>
+				</div>
+			</div>
+		</a>
+		<a href="https://www.youtube.com/" draggable="false">
+			<div class="card container" draggable="true" title="Github">
+				<img class="cardImages" src="{{ url_for('static', filename='icons/youtube.jpeg') }}"></img>
+				<div class="cardTitles" >
+					<span>Github</span>
+				</div>
+			</div>
+		</a>
+		<cr-button draggable="false">
+			<div class="card container" draggable="true" title="Add shortcut">
+				<img class="cardImages" src="{{ url_for('static', filename='icons/youtube.jpeg') }}"></img>
+				<div class="cardTitles" >
+					<span>Add new</span>
+				</div>
+			</div>
+		</cr-button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/* font family from google fonts, Karla:wght@300 */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+html {
+	font-size: 62.5%; /* 62.5% = 10px; to make it easier to calculate REM units. */
+}
+
+body {
+	font-family: "Karla";
+	font-weight: 300;
+	font-size: 2.2rem;
+	color: black;
+	text-align-last: center;
+	overflow-wrap: normal;
+	background-color: white;
+}
